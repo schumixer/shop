@@ -38,4 +38,16 @@ class Controller_Main extends Controller
 		$data = $this->model->get_data_main($this->sqlQuiries['accessories']);
 		$this->view->generate('main_view.php', 'template_view.php', $data);
 	}
+
+	function action_new()
+	{	
+		$data = $this->model->get_data_main($this->sqlQuiries['new']);
+		$this->view->generate('main_view.php', 'template_view.php', $data);
+	}
+
+	function action_sale()
+	{	
+		$data = $this->model->get_data_main($this->sqlQuiries['sale']);
+		$this->view->generate('main_view.php', 'template_view.php', $data);
+	}
 }

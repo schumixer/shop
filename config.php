@@ -28,8 +28,11 @@ $sqlQuiries = ['main'=>"SELECT name, price, image_path  FROM products",
                 (Select id 
                 from categories
                 where name ='accessories')",
+                'new'=>"SELECT name, price, image_path  FROM products where new=1",
+                'sale'=>"SELECT name, price, image_path  FROM products where sale=1"
                 
                 
 ];
 
-$mainMenuList = ['Главная'=>'/','Новинки'=>'/new','Sale'=>'/sale','Доставка'=>'/delivery'];
+$mainMenuList = ['Главная'=>'/','Новинки'=>'/main/new','Sale'=>'/main/sale','Доставка'=>'/delivery'];
+$checkResult ='checked="checked"';

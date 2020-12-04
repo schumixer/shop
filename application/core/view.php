@@ -28,6 +28,8 @@ class View
 		*/
 		$mainMenuList = $GLOBALS['mainMenuList'];
 		$url = $_SERVER["REQUEST_URI"];
+		$lastUrl = explode('/', $url)[2];
+		$checkResult = $GLOBALS['checkResult'];
 		include 'application/views/'.$template_view;
 	}
 }

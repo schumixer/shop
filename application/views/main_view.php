@@ -42,9 +42,9 @@
         </div>
 
         <fieldset class="custom-form__group">
-          <input type="checkbox" name="new" id="new" class="custom-form__checkbox">
+          <input type="checkbox" name="new" id="new" class="custom-form__checkbox" <?=($lastUrl=='new')?'disabled':''?> <?=($lastUrl=='new')?$checkResult:''?>>
           <label for="new" class="custom-form__checkbox-label custom-form__info" style="display: block;">Новинка</label>
-          <input type="checkbox" name="sale" id="sale" class="custom-form__checkbox">
+          <input type="checkbox" name="sale" id="sale" class="custom-form__checkbox"<?=($lastUrl=='sale')?'disabled':''?> <?=($lastUrl=='sale')?$checkResult:''?>>
           <label for="sale" class="custom-form__checkbox-label custom-form__info" style="display: block;">Распродажа</label>
         </fieldset>
         <button class="button" type="submit" style="width: 100%">Применить</button>
@@ -55,16 +55,16 @@
       <section class="shop__sorting">
         <div class="shop__sorting-item custom-form__select-wrapper">
           <select class="custom-form__select" name="category">
-            <option hidden="">Сортировка</option>
+            <option value ="sort" hidden="">Сортировка</option>
             <option value="price">По цене</option>
             <option value="name">По названию</option>
           </select>
         </div>
         <div class="shop__sorting-item custom-form__select-wrapper">
           <select class="custom-form__select" name="prices">
-            <option hidden="">Порядок</option>
-            <option value="all">По возрастанию</option>
-            <option value="woman">По убыванию</option>
+            <option value = "order" hidden="">Порядок</option>
+            <option value="asc">По возрастанию</option>
+            <option value="desc">По убыванию</option>
           </select>
         </div>
         <p class="shop__sorting-res">Найдено <span class="res-sort"><?=count($data)?></span> моделей</p>
